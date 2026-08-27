@@ -1,88 +1,202 @@
-# Sprint 3 - React | Clima Tempo 🌅🌃
+# Sprint 2 - APIs | Clima Tempo & Conversor de Moedas 🌅🌃🤑
 
 ## Visão Geral
 
-Bem-vindo ao repositório da Sprint 3 do nosso grupo de estudo! Nesta sprint, vamos aprender os conceitos básicos do React e consumo de APIs. O objetivo é desenvolver uma aplicação para mostrar ao usuário a previsão do tempo de uma cidade de sua escolha, utilizando APIs públicas e o conceito de componentização para facilitar o desenvolvimento.
+Bem-vindo ao repositório da Sprint 2 do nosso grupo de estudos! Nesta sprint, vamos praticar os conceitos fundamentais de **JavaScript**, manipulação do **DOM** e **consumo de APIs públicas**.
 
-A aplicação deve utilizar uma API para geocodificar (encontrar a latitude e longitude) a cidade que o usuário digitar em um campo de input e, em seguida, usar essas coordenadas para buscar e exibir a previsão do tempo para os próximos 7 dias. O projeto será criado com a ferramenta **Vite**.
+O objetivo é desenvolver uma aplicação utilizando somente **HTML, CSS e JavaScript puro**, sem frameworks ou bibliotecas como React.
+
+A proposta principal é criar uma aplicação de **previsão do tempo**, na qual o usuário poderá pesquisar uma cidade e visualizar informações climáticas obtidas através de APIs públicas.
+
+Como alternativa, o grupo também poderá desenvolver um **conversor de moedas**, utilizando uma API para obter as taxas de câmbio e outra API para exibir informações ou bandeiras dos países relacionados às moedas.
 
 ---
 
 ## 🚀 Descrição do Projeto
 
+### Opção 1 - Clima Tempo 🌤️
+
+Desenvolver uma aplicação que permita ao usuário pesquisar uma cidade e consultar sua previsão do tempo.
+
+A aplicação deverá utilizar uma API para **geocodificar a cidade**, transformando o nome informado pelo usuário em coordenadas de latitude e longitude.
+
+Com essas coordenadas, uma segunda API deverá ser utilizada para buscar as informações climáticas da localização.
+
 ### Objetivo
 
-Desenvolver uma Single Page Application (SPA) em React que permita ao usuário:
+A aplicação deve permitir ao usuário:
 
 - Digitar o nome de uma cidade em um campo de busca. 🔍
-- Visualizar a previsão do tempo atual para essa cidade. ☀️🌧️
-- Visualizar a previsão do tempo para os próximos 7 dias. 📅
-- Ver informações como: temperatura, sensação térmica, umidade, velocidade do vento e condições climáticas (céu limpo, nublado, etc.).
+- Buscar a latitude e longitude da cidade através de uma API.
+- Visualizar as condições climáticas atuais. ☀️🌧️
+- Visualizar a previsão do tempo para os próximos dias. 📅
+- Consultar informações como:
+  - Temperatura;
+  - Sensação térmica;
+  - Umidade;
+  - Velocidade do vento;
+  - Condição climática.
 
 ### Funcionalidades Principais
 
 - Busca por cidade.
-- Exibição dos dados meteorológicos em componentes reutilizáveis.
+- Consumo de pelo menos **duas APIs públicas**.
+- Manipulação dinâmica do HTML através do JavaScript.
+- Exibição dos dados retornados pelas APIs.
+- Layout responsivo. (opcional)
+- Feedback visual enquanto os dados estiverem sendo carregados. ⏳
+- Tratamento de erros, como cidade não encontrada ou falha na API. ❌
+
+---
+
+# 💱 Opção 2 - Conversor de Moedas
+
+Como alternativa ao projeto de clima, o grupo poderá desenvolver um **conversor de moedas utilizando APIs públicas**.
+
+A aplicação deve permitir que o usuário escolha duas moedas e informe um valor para realizar a conversão utilizando a cotação atual.
+
+Além da API responsável pelas taxas de câmbio, deverá ser utilizada uma segunda API para obter informações relacionadas aos países que utilizam cada moeda, como suas respectivas bandeiras.
+
+### Objetivo
+
+A aplicação deve permitir ao usuário:
+
+- Informar um valor para conversão. 💰
+- Selecionar a moeda de origem.
+- Selecionar a moeda de destino.
+- Consultar a cotação atual através de uma API.
+- Exibir o valor convertido.
+- Exibir as bandeiras dos países relacionados às moedas selecionadas. 🌎
+- Atualizar os dados dinamicamente sem recarregar a página.
+
+### Exemplo
+
+```text
+Valor: 100
+
+De:
+🇧🇷 BRL - Real Brasileiro
+
+Para:
+🇺🇸 USD - Dólar Americano
+
+Resultado:
+100 BRL = 18,50 USD
+```
+
+### Funcionalidades Principais
+
+- Seleção de moedas.
+- Conversão utilizando valores reais de câmbio.
+- Consumo de pelo menos **duas APIs públicas**.
+- Exibição dinâmica das bandeiras.
+- Botão para inverter as moedas selecionadas. 🔁
+- Tratamento de erros.
 - Layout responsivo e amigável.
-- Feedback visual durante o carregamento dos dados (loading). ⏳
-- Tratamento de erros (ex.: cidade não encontrada). ❌
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **React**: Biblioteca JavaScript para construir interfaces de usuário.
-- **Vite**: Ferramenta de build e desenvolvimento front-end, rápida e moderna.
-- **CSS Modules / Styled Components / Tailwind CSS / Chakra UI**: Para estilização componentizada (escolha à preferência do grupo).
-- **APIs Públicas**:
-  - **Geocoding API** (ex.: OpenWeather Geocoding API, GeoDB Cities API) - Para converter o nome da cidade em coordenadas.
-  - **Weather API** (ex.: OpenWeather One Call API, Visual Crossing Weather API) - Para obter a previsão atual e dos próximos dias usando as coordenadas.
+O projeto deverá ser desenvolvido utilizando:
+
+- **HTML5**: estrutura da aplicação.
+- **CSS3**: estilização e responsividade.
+- **JavaScript**: lógica da aplicação, manipulação do DOM e comunicação com APIs.
+- **Fetch API**: realização de requisições HTTP para APIs públicas.
+
+Não utilizar frameworks front-end como:
+
+- React;
+- Vue;
+- Angular.
+
+A ideia desta sprint é praticar os fundamentos antes de utilizar abstrações fornecidas por frameworks.
 
 ---
 
-## 📚 Materiais e Tutoriais de Apoio
+# 📚 Materiais e Tutoriais de Apoio
 
-Aqui você encontrará links e referências para facilitar o aprendizado:
+Aqui você encontrará alguns materiais para auxiliar durante o desenvolvimento.
 
-### React & Vite
+## Consumo de APIs
 
-- **Documentação do React**: [https://react.dev/](https://react.dev/) 📖
-- **Documentação do Vite**: [https://vitejs.dev/](https://vitejs.dev/) 📖
-- **Tutorial: Começando com React e Vite**: (Pedir ajuda pro Léo)🎥
+- **Fetch API**
+  https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API
 
-### Consumo de API
-
-- **Fetch API ou Axios**: Como fazer requisições HTTP.
-  - [MDN Web Docs - Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) 📖
-  - [Documentação do Axios](https://axios-http.com/) 📖
-- **Como usar useEffect para operações assíncronas**: [Um guia para useEffect](https://beta.reactjs.org/learn/synchronizing-with-effects) 📖
-
-### APIs Sugeridas
-
-- **OpenWeatherMap**:
-  - [Geocoding API](https://openweathermap.org/api/geocoding-api)
-  - [One Call API](https://openweathermap.org/api/one-call-api) (Obs.: Requer cadastro para obter chave API)
-- **Visual Crossing Weather**:
-  - [Weather API](https://www.visualcrossing.com/weather-api) (Tem um plano gratuito generoso)
+- **Async/Await**
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function
 
 ---
 
-## 🎯 Conceitos React para Praticar
+# 🌤️ APIs Sugeridas - Clima
 
-- **Componentes Funcionais**: Criar a aplicação usando componentes funcionais.
-- **Hooks**: `useState` para gerenciar o estado da aplicação (dados do clima, termo de busca, loading, erro). `useEffect` para disparar as buscas na API.
-- **Props**: Passar dados entre componentes (ex.: do componente pai `App` para os componentes `CurrentWeather` e `Forecast`).
-- **Event Handling**: Capturar o evento de submit do formulário de busca.
-- **Conditional Rendering**: Mostrar componentes condicionalmente (ex.: mostrar Loader apenas quando `isLoading` for true).
+Algumas opções de APIs que podem ser utilizadas:
+
+### OpenWeatherMap
+
+**Geocoding API**
+
+Converte o nome de uma cidade em latitude e longitude.
+
+https://openweathermap.org/api/geocoding-api
+
+**Weather API**
+
+Permite consultar informações climáticas utilizando coordenadas.
+
+https://openweathermap.org/api
+
+### Open-Meteo
+
+Outra alternativa para consulta de informações meteorológicas.
+
+https://open-meteo.com/
 
 ---
 
-## 🎉 Próximos Desafios (Extras)
+# 💱 APIs Sugeridas - Conversor de Moedas
 
-- Adicionar um toggle para alternar entre unidades métricas (°C, m/s) e imperiais (°F, mph). 🔁
-- Salvar as últimas cidades buscadas no `localStorage`.
-- Usar a API de geolocalização do navegador para mostrar a previsão do tempo da localização atual do usuário ao carregar a página. 📍
-- Melhorar a UI/UX com ícones representando as condições climáticas.
+### ExchangeRate API
+
+API para consulta de taxas de câmbio.
+
+https://www.exchangerate-api.com/
+
+### Frankfurter
+
+API gratuita para consulta de taxas de câmbio.
+
+https://www.frankfurter.app/
+
+### REST Countries
+
+Pode ser utilizada para obter informações sobre países, moedas e bandeiras.
+
+https://restcountries.com/
+
+---
+
+# 🎉 Próximos Desafios (Extras)
+
+Caso o grupo termine as funcionalidades principais, algumas funcionalidades extras podem ser implementadas.
+
+### Clima Tempo
+
+- Utilizar a geolocalização do navegador para detectar automaticamente a localização do usuário. 📍
+- Salvar as últimas cidades pesquisadas utilizando `localStorage`.
+- Alterar o visual da página dependendo da condição climática.
+- Adicionar ícones representando chuva, sol, nuvens etc.
+- Permitir alternar entre °C e °F. 🔁
+
+### Conversor de Moedas
+
+- Salvar as últimas conversões utilizando `localStorage`.
+- Criar uma lista de moedas favoritas. ⭐
+- Adicionar um botão para inverter rapidamente as moedas.
+- Exibir a cotação atual entre as duas moedas.
+- Mostrar a variação da cotação.
+- Permitir pesquisar moedas pelo nome ou código.
 
 ---
 
